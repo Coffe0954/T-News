@@ -1,0 +1,508 @@
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("/fonts/NeueHaasUnica-Regular.woff2") format("woff2"),
+    url("/fonts/NeueHaasUnica-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tinkoff Sans";
+  src: url("/fonts/TinkoffSans-Regular.woff2") format("woff2"),
+    url("/fonts/TinkoffSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: rgba(246, 247, 248, 1);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 70px;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+.logout-btn:hover {
+  opacity: 0.8;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 100px;
+}
+
+.logo {
+  height: 32px;
+  width: 32px;
+  margin: 5px 10px 0 200px;
+}
+
+.search-form {
+  flex-grow: 1;
+  max-width: 320px;
+  margin: 0px 24px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 20px;
+  background-color: rgba(36, 74, 127, 0.06);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(36, 74, 127, 0.06);
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.search-input:hover {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.auth-links {
+  display: flex;
+  gap: 16px;
+  margin-left: 870px;
+  align-items: center;
+}
+
+.auth-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(0, 0, 0, 0.54);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 4px 0;
+  margin-top: 5px;
+  transition: color 0.2s;
+}
+
+.auth-link:hover {
+  color: #555;
+}
+
+.icon-arrow {
+  width: 28px;
+  height: 28px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.icon-profile {
+  height: 32px;
+  width: 32px;
+}
+
+.icon-heart {
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+  padding: 0 5px 0 0;
+}
+
+.nav-divider {
+  height: 1px;
+  background-color: #d0d0d0;
+  margin: 0 auto;
+  max-width: 1420px;
+  width: calc(100% - 80px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #ffd700;
+}
+
+.post-title {
+  font-family: "Tinkoff Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #222222;
+  letter-spacing: 0.2px;
+}
+
+.post {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 40px 0 0px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  color: #222222;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.08);
+}
+
+.comment-container {
+  max-width: 900px;
+  margin: 0 auto 0 720px;
+  padding: 0;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar-comment {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #ffd700;
+}
+
+.comment-title {
+  font-family: "Tinkoff Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #222222;
+  letter-spacing: 0.2px;
+}
+
+.comment-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.comment-content {
+  position: relative;
+  display: inline-block;
+  padding-right: 24px;
+  margin: 0;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.icon-delete {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  padding-top: 2px;
+}
+
+.icon-delete:hover {
+  opacity: 1;
+}
+
+.comment {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 0px 0 30px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-content {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  color: #222222;
+}
+
+.comment:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.08);
+}
+
+.comment-form-container {
+  max-width: 900px;
+  max-height: 400px;
+  margin: 0 auto 0 720px;
+  padding: 0;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-title {
+  font-family: "Tinkoff Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #444;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 16, 36, 0.03);
+  font-family: "Neue Haas Unica", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  min-height: 200px;
+  box-sizing: border-box;
+  background-color: rgba(0, 16, 36, 0.03);
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+.submit-comment-btn {
+  align-self: flex-end;
+  background-color: #ffd700;
+  color: rgba(51, 51, 51, 1);
+  border: none;
+  border-radius: 10px;
+  gap: 15px;
+  padding: 8px 16px 8px 16px;
+  font-family: "Tinkoff Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-comment-btn:hover {
+  background-color: #ffc800;
+}
+
+.action-btn {
+  padding: 12.4px 16px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  text-align: center;
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.like-btn {
+  background-color: #ffd700;
+  color: #222;
+  width: 70px;
+  height: 44px;
+  padding: 10px;
+  gap: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: #010101;
+}
+
+.counter-comment {
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: rgba(18, 109, 247, 1);
+}
+
+.like-btn:hover {
+  background-color: #ffc800;
+}
+
+.comment-btn {
+  background-color: rgba(36, 74, 127, 0.06);
+  color: rgba(18, 109, 247, 1);
+  width: 143px;
+  height: 44px;
+  padding: 2px 6px 2px 6px;
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400px;
+  line-height: 20px;
+}
+
+.comment-btn:hover {
+  background-color: #d0ebff;
+}
+
+.action-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Адаптация */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .auth-links {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 15px;
+    height: 56px;
+  }
+
+  .logo {
+    height: 32px;
+    margin-left: 8px;
+  }
+
+  .search-form {
+    margin: 0 16px;
+  }
+
+  .auth-links {
+    gap: 12px;
+  }
+
+  .auth-link {
+    font-size: 12px;
+  }
+
+  .post {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    height: 48px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .search-input {
+    padding: 6px 12px;
+  }
+
+  .auth-link span {
+    display: none;
+  }
+
+  .auth-link {
+    padding: 4px;
+  }
+
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .avatar {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 16px 12px;
+  }
+
+  .post {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .post-title {
+    font-size: 15px;
+  }
+
+  .post-content {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
