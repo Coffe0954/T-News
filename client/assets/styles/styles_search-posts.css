@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("/fonts/NeueHaasUnica-Regular.woff2") format("woff2"),
+    url("/fonts/NeueHaasUnica-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tinkoff Sans";
+  src: url("/fonts/TinkoffSans-Regular.woff2") format("woff2"),
+    url("/fonts/TinkoffSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: rgba(246, 247, 248, 1);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 70px;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+.logout-btn:hover {
+  opacity: 0.8;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 100px;
+}
+
+.logo {
+  height: 32px;
+  width: 32px;
+  margin: 5px 10px 0 200px;
+}
+
+.search-form {
+  flex-grow: 1;
+  max-width: 320px;
+  margin: 0px 24px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 20px;
+  background-color: rgba(36, 74, 127, 0.06);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(36, 74, 127, 0.06);
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.search-input:hover {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.auth-links {
+  display: flex;
+  gap: 16px;
+  margin-left: 870px;
+  align-items: center;
+}
+
+.auth-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(0, 0, 0, 0.54);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 4px 0;
+  margin-top: 5px;
+  transition: color 0.2s;
+}
+
+.auth-link:hover {
+  color: #555;
+}
+
+.icon-arrow {
+  width: 28px;
+  height: 28px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.icon-profile {
+  height: 32px;
+  width: 32px;
+}
+
+.icon-heart {
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+  padding: 0 5px 0 0;
+}
+
+.nav-divider {
+  height: 1px;
+  background-color: #d0d0d0;
+  margin: 0 auto;
+  max-width: 1420px;
+  width: calc(100% - 80px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px 300px;
+  padding: 24px 20px;
+}
+
+.post {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 40px 0 60px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.08);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #ffd700;
+}
+
+.post-title {
+  font-family: "Tinkoff Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #222222;
+  letter-spacing: 0.2px;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  color: #222222;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Кнопки */
+.buttons-container {
+  display: flex;
+  gap: 8px;
+  margin: 40px 0px 0px 320px;
+  background-color: transparent;
+  border-bottom: 0px;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: white;
+  border: 2px solid transparent;
+  color: #222;
+  font-family: "Tinkoff Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-button.active {
+  background-color: white;
+  border: 2px solid #ffd700;
+}
+
+.tab-button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Список пользователей */
+.users-list {
+  padding: 0;
+  background-color: #f9f9f9;
+  list-style: none;
+  margin: 0 0 0 300px;
+  width: 400px;
+  border: none;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none !important; /* Принудительно убираем границы */
+  border-bottom: none !important; /* Убираем нижнюю границу */
+}
+
+.user-item:hover .user-name {
+  color: #d4a017;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-name {
+  font-family: "Neue Haas Unica", sans-serif;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.action-btn {
+  padding: 12.4px 16px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  text-align: center;
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.like-btn {
+  background-color: #ffd700;
+  color: #222;
+  width: 70px;
+  height: 44px;
+  padding: 10px;
+  gap: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: #010101;
+}
+
+.counter-comment {
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: rgba(18, 109, 247, 1);
+}
+
+.like-btn:hover {
+  background-color: #ffc800;
+}
+
+.comment-btn {
+  background-color: rgba(36, 74, 127, 0.06);
+  color: rgba(18, 109, 247, 1);
+  width: 143px;
+  height: 44px;
+  padding: 2px 6px 2px 6px;
+  font-family: "Neue Haas Unica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400px;
+  line-height: 20px;
+}
+
+.comment-btn:hover {
+  background-color: #d0ebff;
+}
+
+.action-icon {
+  width: 24px;
+  height: 24px;
+}
