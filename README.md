@@ -1,3 +1,3 @@
 > **NOTE**  
-> Для запуска `node backend/server/server.js` требуется MongoDB в Docker.  
+> Для запуска `node backend/server/server.js`, требуется MongoDB в Docker.  
 > Остальные зависимости устанавливаются обычным способом (`npm i` или любым другим вам известным).
